@@ -46,7 +46,7 @@ CCProgram unlit-vs %{
     CCGetWorldMatrix(matWorld);
 
     highp vec4 vpos = cc_matView * matWorld * position;
-    highp float zOff = vpos.z/dist;
+    highp float zOff = vpos.z / dist;
     vpos += allOffset * zOff * zOff;
     highp vec4 pos = cc_matProj * vpos;
 
